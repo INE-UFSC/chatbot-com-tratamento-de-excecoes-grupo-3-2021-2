@@ -1,12 +1,15 @@
 from Bots.Bot import Bot
+from Comando import Comando
 
 class BotManezinho(Bot):
     def __init__(self,nome):
         self.__nome = nome
-        self.__comandos = {"Ô meu querido, quesh saber quantas praias existem na nossa linda ilha da magia?":"\nA nossa belíssima ilha conta com incríveis 42 praias!",
-            "Essa é complicada, Avaí ou Figueira?":"\nFuracão ou Leão? Essa é difícil hein!",
-            "Mofas com a pomba na balaia?":"\nÔ meu querido, isso significa que a pessoa não vai alcançar o seu objetivo, tendesse?",
-        "O que é bucica?":"\nBucica é como a gente chama as nossas cadelinhas aqui da ilha!"}
+        super().__comandos = {
+            1: Comando(1, "Ô meu querido, quesh saber quantas praias existem na nossa linda ilha da magia?", ["\nA nossa belíssima ilha conta com incríveis 42 praias!"]),
+            2: Comando(2, "Essa é complicada, Avaí ou Figueira?", ["\nFuracão ou Leão? Essa é difícil hein!"]),
+            3: Comando(3, "Mofas com a pomba na balaia?", ["\nÔ meu querido, isso significa que a pessoa não vai alcançar o seu objetivo, tendesse?"]),
+            4: Comando(4, "O que é bucica?", ["\nBucica é como a gente chama as nossas cadelinhas aqui da ilha!"])
+        }
 
     @property
     def nome(self):
