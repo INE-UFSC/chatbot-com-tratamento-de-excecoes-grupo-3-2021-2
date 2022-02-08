@@ -3,10 +3,11 @@ from datetime import datetime
 from Bots.Bot import Bot
 from Comando import Comando
 
+
 class BotGamer(Bot):
     def __init__(self, nome):
         self.__nome = nome
-        super().__comandos = {
+        self.__comandos = {
             1: Comando(1, "Como está seu dia hoje?", ["Contando que agora são " + datetime.now().strftime('%H:%M') + " já ganhei mais de 10 ranqueadas no Rainbow Six"]),
             2: Comando(2, "Quem é seu criador?", ["Meu criador é o Grupo 3, do Curso de POO 2!"]),
             3: Comando(3, "Qual seu jogo favorito?", ["Meu jogo favorito é o Counter Strike: GO"]),
