@@ -4,7 +4,7 @@ from Comando import Comando
 class BotManezinho(Bot):
     def __init__(self,nome):
         self.__nome = nome
-        super().__comandos = {
+        self.__comandos = {
             1: Comando(1, "Ô meu querido, quesh saber quantas praias existem na nossa linda ilha da magia?", ["\nA nossa belíssima ilha conta com incríveis 42 praias!"]),
             2: Comando(2, "Essa é complicada, Avaí ou Figueira?", ["\nFuracão ou Leão? Essa é difícil hein!"]),
             3: Comando(3, "Mofas com a pomba na balaia?", ["\nÔ meu querido, isso significa que a pessoa não vai alcançar o seu objetivo, tendesse?"]),

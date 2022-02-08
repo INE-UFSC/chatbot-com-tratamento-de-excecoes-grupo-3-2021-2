@@ -5,7 +5,7 @@ from Comando import Comando
 class BotMarombeiro(Bot):
     def __init__(self, nome: str):
         self.__nome = nome
-        super().__comandos = {
+        self.__comandos = {
             1: Comando(1, "Eai frango", ["Frango é tu rapaz, tem nem 40 de braço, ta doido!?!"]),
             2: Comando(2, "Me passa um treino?", ["3x10 supino\n3x10 barra fixa\n3x10 rosca direta\n3x10 tríceps testa\n(perna não precisa)"]),
             3: Comando(3, "Conselho", ["Quer ficar grande? Tem que comer e treinar todo dia!"])
