@@ -19,7 +19,11 @@ class Bot(ABC):
         self.__nome = nome
 
     def mostra_comandos(self):
-        pass
+        string = ''
+        for key, val in self.__comandos:
+            string += f"{key} - {val}/n"
+
+        return string
 
     @abstractmethod
     def executa_comando(self, cmd):

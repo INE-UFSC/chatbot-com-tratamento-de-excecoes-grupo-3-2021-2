@@ -1,12 +1,14 @@
 from Bots.Bot import Bot
+from Comando import Comando
+
 
 class BotMarombeiro(Bot):
     def __init__(self, nome: str):
         self.__nome = nome
-        self.__comandos = {
-            "Eai frango": "Frango é tu rapaz, tem nem 40 de braço, ta doido!?!",
-            "Me passa um treino?": "3x10 supino\n3x10 barra fixa\n3x10 rosca direta\n3x10 tríceps testa\n(perna não precisa)",
-            "Conselho": "Quer ficar grande? Tem que comer e treinar todo dia!"
+        super().__comandos = {
+            1: Comando(1, "Eai frango", ["Frango é tu rapaz, tem nem 40 de braço, ta doido!?!"]),
+            2: Comando(2, "Me passa um treino?", ["3x10 supino\n3x10 barra fixa\n3x10 rosca direta\n3x10 tríceps testa\n(perna não precisa)"]),
+            3: Comando(3, "Conselho", ["Quer ficar grande? Tem que comer e treinar todo dia!"])
         }
 
     @property
@@ -19,11 +21,8 @@ class BotMarombeiro(Bot):
 
     def apresentacao(self):
         return "Treino e dieta eu não furo, tá ligado?"
- 
-    def mostra_comandos(self):
-        return self.__comandos
-    
-    def executa_comando(self,cmd):
+
+    def executa_comando(self, cmd):
         try:
             return self.__comandos[cmd]
         except:

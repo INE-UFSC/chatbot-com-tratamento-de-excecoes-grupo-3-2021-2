@@ -21,8 +21,8 @@ class Comando:
         return self.__respostas[randint(0, len(self.__respostas))]
 
     # adiciona resposta
-    def addResposta(self, resposta):
-        pass
+    def addResposta(self, resposta: str):
+        self.__respostas.append(resposta)
 
     # remove resposta (opcional)
     def delResposta(self, resposta):
