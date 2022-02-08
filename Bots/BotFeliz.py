@@ -6,8 +6,8 @@ class BotFeliz(Bot):
     def __init__(self, nome):
         self.__nome = nome
         super().__comandos = {
-            1: Comando(1, "Qual o seu nome?",[f"{self.nome} :D"],
-            2: Comando(2, "Quero um conselho",["Sorria, a vida é uma só!"],
+            1: Comando(1, "Qual o seu nome?", [f"{self.nome} :D"]),
+            2: Comando(2, "Quero um conselho", ["Sorria, a vida é uma só!"]),
         }
 
     # nao esquecer o decorator
