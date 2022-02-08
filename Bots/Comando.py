@@ -18,10 +18,12 @@ class Comando:
 
     # retorna uma resposta aleatória
     def getRandomResposta(self):
-        return self.__respostas[randint(0, len(self.__respostas)]
+        return self.__respostas[randint(0, len(self.__respostas))]
 
     # adiciona resposta
     def addResposta(self, resposta):
+        pass
 
-        # remove resposta (opcional)
+    # remove resposta (opcional)
     def delResposta(self, resposta):
+        pass
