@@ -5,8 +5,7 @@ from Comando import Comando
 class BotTriste(Bot):
     def __init__(self, nome):
         self.__nome = nome
-        super().__init__(nome)
-        super().comandos = {
+        self.__comandos = {
             1: Comando(1, 'Oláa!!', ['Oi...']),
             2: Comando(2, 'Como você está? :)', ['Queria sentir algo para te responder...']),
             3: Comando(3, 'Pode me ajudar?', ['Até posso, mas acho que não ajudaria muito de qualquer jeito...']),
@@ -26,7 +25,7 @@ class BotTriste(Bot):
 
     def executa_comando(self, cmd):
         try:
-            return self.__comando[cmd]
+            return self.__comandos[cmd]
         except:
             print("Não sei...")
 
