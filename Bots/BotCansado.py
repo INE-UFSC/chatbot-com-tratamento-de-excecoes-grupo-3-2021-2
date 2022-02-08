@@ -2,9 +2,19 @@ from Bots.Bot import Bot
 from random import randint
 
 class BotCansado(Bot):
-    def __init__(self,nome):
+    def __init__(self,nome, urlJSON, COMANDOS):
         self.__nome = nome
-
+        self.__urlJSON = urlJSON
+        self.__comandos = COMANDOS
+        
+    @property
+    def urlJSON(self):
+        return self.__urlJSON
+   
+    @property
+    def comandos(self):
+        return self.__comandos
+    
     @property
     def nome(self):
         return self.__nome
