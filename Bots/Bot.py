@@ -21,7 +21,7 @@ class Bot(ABC):
     def mostra_comandos(self):
         string = ''
         for key, val in self.__comandos:
-            string += f"{key} - {val}/n"
+            string += f"{key} - {val}\n"
 
         return string
 
