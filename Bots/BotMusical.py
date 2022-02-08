@@ -6,7 +6,7 @@ class BotMusical(Bot):
         self.__comandos = {
             1: Comando(1, 'Bom dia',[ 'Alguma coisa acontece no meu coração... Ah, oi! Bom dia!']),
             2: Comando(2, 'Quem é você?',[ f'EU SOU O SAMBAAA! Brincadeira, eu sou {self.__nome}!']),
-            3: Comando(3, 'Como vai ser o futuro?': ['Eu vejo a vida melhor no futuro, eu vejo isso por cima de um muro\nde hipocrisia que insiste em nos rodear...'])
+            3: Comando(3, 'Como vai ser o futuro?', ['Eu vejo a vida melhor no futuro, eu vejo isso por cima de um muro\nde hipocrisia que insiste em nos rodear...'])
         }
 
     @property

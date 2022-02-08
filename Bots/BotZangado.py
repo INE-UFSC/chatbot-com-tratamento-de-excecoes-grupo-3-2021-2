@@ -4,12 +4,6 @@ from Comando import Comando
 class BotZangado(Bot):
     def __init__(self, nome):
         super().__init__(nome)
-        self.__comandos = {
-            "": "",
-            "": "", 
-            "": "", 
-            "": ""
-        }
         super().__comandos = {
             1: Comando(1, "Olá, tudo bem? ", [f"E o que tem de bom?!"]),
             2: Comando(2, "Como você está ?", ["Não interessa!"]),
