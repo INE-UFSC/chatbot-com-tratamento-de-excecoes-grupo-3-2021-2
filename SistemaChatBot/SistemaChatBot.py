@@ -1,3 +1,4 @@
+from lib2to3.pgen2.parse import ParseError
 from Bots.Bot import Bot
 
 
@@ -46,21 +47,21 @@ class SistemaChatBot:
         print(self.__bot.mostra_comandos())
 
     def le_envia_comando(self):
-        entrada = int(
-            input('Digite o comando desejado:(-1 para encerrar o programa) '))
-        if entrada == -1:
-            return True
-
-        while entrada < -1 or entrada >= len(self.__bot.mostra_comandos()):
-            print('Valor inválido!')
+        try:
             entrada = int(
                 input('Digite o comando desejado:(-1 para encerrar o programa) '))
 
-        try:
+            if entrada == -1:
+                return True
+
             resposta_obj = self.__bot.executa_comando(entrada)
             print(f'{self.__bot.nome} diz: {resposta_obj.getRandomResposta()}')
+        except ValueError:
+            print("Informe um número válido")
+            return False
         except KeyError:
             print("Indíce não existe")
+            return False
 
         return False
 
