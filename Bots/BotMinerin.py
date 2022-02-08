@@ -1,14 +1,17 @@
 from Bots.Bot import Bot
+from Comando import Comando
 
 class BotMinerin(Bot):
     def __init__(self,nome):
         self.__nome = nome
-        self.__comandos = {"Você queria ter praia?":"Sô, não é Minas que não tem mar, é o mar que não têm Minas!",
-            "Pão de Queijo ou Queijo Canastra?":"Pão de Queijo com Queijo Canastra",
-            "O que significa a sigla GO?":"GOnorante! Mas nós aqui de Minas somo Mai Gonorante ainda!",
-        "Onde você mora?":"Eu moro logo ali, na rua de cima do açouque do Valtin, debaixo da rua da Vânia mãe do Zé",
-        "Qual o verdadeiro truco?":"O truco de verdade é o trucão com manilha fixa! Esses paulistas que inventam esse trem de manilha alta",
-        "Você é atleticano ou cruzeirense?":"GALOOOOOO!"}
+        super().__comandos = {
+            1: Comando(1, "Você queria ter praia?", ["Sô, não é Minas que não tem mar, é o mar que não têm Minas!"]),
+            2: Comando(2, "Pão de Queijo ou Queijo Canastra?", ["Pão de Queijo com Queijo Canastra"]),
+            3: Comando(3, "O que significa a sigla GO?", ["GOnorante! Mas nós aqui de Minas somo Mai Gonorante ainda!"]),
+            4: Comando(4, "Onde você mora?", ["Eu moro logo ali, na rua de cima do açouque do Valtin, debaixo da rua da Vânia mãe do Zé"]),
+            5: Comando(5, "Qual o verdadeiro truco?", ["O truco de verdade é o trucão com manilha fixa! Esses paulistas que inventam esse trem de manilha alta"]),
+            6: Comando(6, "Você é atleticano ou cruzeirense?", ["GALOOOOOO!"])
+        }
     
     @property
     def nome(self):
