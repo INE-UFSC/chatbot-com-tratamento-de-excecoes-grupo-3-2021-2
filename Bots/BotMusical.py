@@ -1,5 +1,5 @@
 from Bots.Bot import Bot
-
+from Comando import Comando
 class BotMusical(Bot):
     def __init__(self,nome):
         self.__nome = nome
